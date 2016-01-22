@@ -1,7 +1,7 @@
 # Preliminaries:
 # Load the needed packages
 packages <- c("data.table", "dplyr", "lubridate")
-sapply(packages, require, character.only=TRUE, quietly=TRUE)
+sapply(packages, require, character.only = TRUE, quietly = TRUE)
 
 
 # Get the data from the source:
@@ -24,7 +24,7 @@ df <- read.table(pipe('grep "^[1-2]/2/2007" "household_power_consumption.txt"'),
 
 
 # Read the column names from the original file 
-df_colnames <- readLines("household_power_consumption.txt", n=1) %>% strsplit(";") %>% unlist()
+df_colnames <- readLines("household_power_consumption.txt", n = 1) %>% strsplit(";") %>% unlist()
 
 
 # Assign proper column names to the data frame
