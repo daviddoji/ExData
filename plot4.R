@@ -52,7 +52,7 @@ lines(datetimes, df$Sub_metering_3, col = "blue")
 legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
        col = c("black","red","blue"), lwd = c(1, 1, 1), bty = "n")
 # Subplot 4
-plot(datetimes, df$Global_reactive_power, type = "l")
+plot(datetimes, df$Global_reactive_power, type = "l", ylab = "Global_reactive_power")
 
 # Close graphics device
 dev.off()
