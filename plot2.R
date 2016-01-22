@@ -31,12 +31,15 @@ df_colnames <- readLines("household_power_consumption.txt", n=1) %>% strsplit(";
 colnames(df) <- df_colnames
 
 
-# Open PNG graphics device
-png(file = "plot2.png", width = 480, height = 480)
+# Consider Dates and Times columns as POSIXct objects
 datetimes <- dmy_hms(paste(df$Date, df$Time))
 
 
-# Set transparent background and plot Graph 1
+# Open PNG graphics device
+png(file = "plot2.png", width = 480, height = 480)
+
+
+# Set transparent background and plot Graph 2
 par(bg = NA)
 plot(datetimes, df$Global_active_power, type = "l", ylab = "Global Active Power (kilowatts)", xlab = "")
 
